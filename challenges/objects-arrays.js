@@ -1,3 +1,59 @@
+// /* ===== Prototype Practice ===== */
+
+// // Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge.
+
+// /* == Step 1: Base Constructor ==
+//   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
+// */
+// function CuboidMaker (length, width, height) {
+//   this.length = length,
+//   this.width = width,
+//   this.height = height;
+// }  
+
+
+
+// /* == Step 2: Volume Method ==
+//   Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
+  
+//   Formula for cuboid volume: length * width * height
+//   */
+
+//   CuboidMaker.prototype.volume = function (volume) {
+//     return this.length * this.width * this.height;
+//   }
+  
+
+// /* == Step 3: Surface Area Method ==
+//   Create another method using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
+
+//   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
+// */
+
+// CuboidMaker.prototype.surfaceArea = function (surfaceArea) {
+//   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+// }
+
+
+// /* == Step 4: Create a new object that uses CuboidMaker ==
+//   Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
+//   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. 
+// */
+
+// const cuboid = new CuboidMaker (4, 5, 5); 
+
+
+
+
+// // Test your volume and surfaceArea methods by uncommenting the logs below:
+// console.log(cuboid.volume()); // 100
+// console.log(cuboid.surfaceArea()); // 130
+
+
+
+
+
+
 // ==== Objects ====
 
 /* 
@@ -12,23 +68,50 @@
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
+const tDino = {
+  name: 'tyrannosaurus',
+  diet: 'carnivorous',
+  weight: '7000kg',
+  length: '12m',
+  period: 'Late Cretaceous',
+  speak: function () {
+    return "RAWERSRARARWERSARARARRRR!";
+  }
+}
+
+const sDino = {
+  name: 'stegosaurus',
+  diet: 'carnivorous',
+  weight: '2000kg',
+  length: '9m',
+  period: 'Late Jurassic'
+}
+
+const vDino = {
+  name: 'velociraptor',
+  diet: 'carnivorous',
+  weight: '15kg',
+  length: '1.8m',
+  period: 'Late Cretaceous'
+}
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(tDino.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(vDino.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(sDino.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(tDino.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+
+console.log(tDino.speak());
 
 
 // ==== Arrays ====
@@ -52,6 +135,10 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+
+universities = graduates.push.
+
+
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
@@ -124,4 +211,11 @@ console.log(populationTotal);
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
+
+
+
+
+
+
+
 
