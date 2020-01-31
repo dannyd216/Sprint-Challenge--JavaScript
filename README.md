@@ -32,15 +32,26 @@ Edit this document to include your answers after each question. Make sure to lea
 map returns an array as forEach only loops through
 
 2. What is the difference between a function and a method?
-
+Method is a function inside of an Object
+A function is defined outside of an Object
 
 3. What is closure?
 Being able to nest elements and call upon them at a later time if needed
 
 4. Describe the four rules of the 'this' keyword.
 
+Window = this applies to the window itself unless strict mode is used
+
+Implicit = whenever there is a preceding dot we look to the left of the dot and this refers to the Object before the dot
+
+New = using the constructor function to create a new instance of the Object, this refers to that instance
+
+Explicit = using the call or apply method, ultimately overriding the previous this 
+
 
 5. Why do we need super() in an extended class?
+
+super() is used to access and call functions on a parent Object to be used for inheritance
 
 ## Project Set up
 
