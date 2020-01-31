@@ -136,7 +136,7 @@ const graduates = [
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 
-universities = graduates.push.
+universities = graduates.map(graduates)
 
 
 console.log(universities);
@@ -178,6 +178,11 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
+
+zooAnimals.forEach(function(zooAnimal) {
+  displayNames.push(`Name: ${zooAnimal.animal_name}, Scientific: ${zooAnimal.scientific_name}.`);
+})
+
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -187,6 +192,12 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = [];
+
+zooAnimals.map(function (zooAnimals) {
+  lowCaseAnimalNames.push(zooAnimals.animal_name.toLowerCase());
+})
+
+
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -195,6 +206,9 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 const lowPopulationAnimals = [];
+
+lowPopulationAnimals.push(zooAnimals.filter((i) => i.population < 5));
+
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -203,6 +217,15 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 const populationTotal = 0;
+
+let total = zooAnimals.reduce((accum, populationTotal) => {accum + populationTotal.population}, );
+
+
+
+// let total = zooAnimals.reduce((accum, populationTotal) => {return populationTotal += zooAnimals.population;}, 0);
+
+// total.push(zooAnimals.reduce(((sum, populationTotal) => { return sum + populationTotal}, )));
+
 console.log(populationTotal);
 
 
@@ -211,10 +234,6 @@ console.log(populationTotal);
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
-
-
-
-
 
 
 
