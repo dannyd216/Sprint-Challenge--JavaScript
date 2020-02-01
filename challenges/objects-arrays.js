@@ -5,11 +5,11 @@
 // /* == Step 1: Base Constructor ==
 //   Create a constructor function named CuboidMaker that accepts properties for length, width, and height
 // */
-// function CuboidMaker (length, width, height) {
-//   this.length = length,
-//   this.width = width,
-//   this.height = height;
-// }  
+function CuboidMaker (length, width, height) {
+  this.length = length,
+  this.width = width,
+  this.height = height;
+}  
 
 
 
@@ -19,9 +19,9 @@
 //   Formula for cuboid volume: length * width * height
 //   */
 
-//   CuboidMaker.prototype.volume = function (volume) {
-//     return this.length * this.width * this.height;
-//   }
+  CuboidMaker.prototype.volume = function (volume) {
+    return this.length * this.width * this.height;
+  }
   
 
 // /* == Step 3: Surface Area Method ==
@@ -30,9 +30,10 @@
 //   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 // */
 
-// CuboidMaker.prototype.surfaceArea = function (surfaceArea) {
-//   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
-// }
+
+CuboidMaker.prototype.surfaceArea = function (surfaceArea) {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+}
 
 
 // /* == Step 4: Create a new object that uses CuboidMaker ==
@@ -40,7 +41,7 @@
 //   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. 
 // */
 
-// const cuboid = new CuboidMaker (4, 5, 5); 
+const cuboid = new CuboidMaker (4, 5, 5); 
 
 
 
@@ -152,6 +153,7 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
+
 console.log(unisWithUni);
 
 
@@ -180,6 +182,7 @@ The zoos want to display both the scientific name and the animal name in front o
 const displayNames = [];
 
 zooAnimals.forEach(function(zooAnimal) {
+
   displayNames.push(`Name: ${zooAnimal.animal_name}, Scientific: ${zooAnimal.scientific_name}.`);
 })
 
@@ -194,9 +197,9 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 const lowCaseAnimalNames = [];
 
 zooAnimals.map(function (zooAnimals) {
+
   lowCaseAnimalNames.push(zooAnimals.animal_name.toLowerCase());
 })
-
 
 console.log(lowCaseAnimalNames);
 
@@ -218,7 +221,7 @@ The zoos need to know their total animal population across the United States. Fi
 */
 const populationTotal = 0;
 
-let total = zooAnimals.reduce((accum, populationTotal) => {accum + populationTotal.population}, );
+let total = zooAnimals.reduce((accum, populationTotal) => {return accum + populationTotal.population}, );
 
 
 
@@ -227,6 +230,10 @@ let total = zooAnimals.reduce((accum, populationTotal) => {accum + populationTot
 // total.push(zooAnimals.reduce(((sum, populationTotal) => { return sum + populationTotal}, )));
 
 console.log(populationTotal);
+
+
+
+
 
 
 /*
