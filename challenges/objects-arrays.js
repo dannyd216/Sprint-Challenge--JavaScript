@@ -134,21 +134,45 @@ const graduates = [
 
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
+i was confused as to how to word the command when the array is given already
+
+
 Once you have the new array created, sort the universities alphabetically and log the result. */
+
+
+/**FIXED THIS */
 const universities = [];
 
-universities = graduates.map(graduates)
+//FIRST CREATE THE CORRECT COMMAND 
+//.map MUST HAVE A CALLBACK SO WE MUST MAKE IT I.E. FUNCTION(GRADUATES){}
+graduates.map(function(graduates) {
 
+  universities.push(graduates.university);
+
+  universities.sort();
+
+});
 
 console.log(universities);
 
-/* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
-The resulting contact information strings should have a space between the first name and the email, like this: 
+
+/* Request 2: Create a new array called contactInfo 
+that contains both first name and email of each student. 
+This will be an array of strings.
+
+The resulting contact information strings should 
+have a space between the first name and the email, 
+like this: 
 "Josh josh@example.com"
 
 Log the result of your new array. */
 const contactInfo = [];
+
+
+
+
+
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
@@ -176,7 +200,13 @@ const zooAnimals = [
 
 /* Request 1: .forEach()
 
-The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
+The zoos want to display both the scientific name and 
+the animal name in front of the habitats. Populate the 
+displayNames array with 
+only the animal_name and scientific_name of each animal.
+ displayNames will be an array of strings, and each 
+ string should follow this
+  pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
 const displayNames = [];
