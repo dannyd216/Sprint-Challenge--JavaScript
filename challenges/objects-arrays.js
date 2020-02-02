@@ -147,12 +147,15 @@ const universities = [];
 //.map MUST HAVE A CALLBACK SO WE MUST MAKE IT I.E. FUNCTION(GRADUATES){}
 graduates.map(function(graduates) {
 
+  //WE ARE PUSHING WHAT IS ON THE LEFT TO THE ARRAY REFERENCED ON THE RIGHT
   universities.push(graduates.university);
 
+  //THEN SORT THE ARRAY
   universities.sort();
 
 });
 
+//DISPLAY THE NEW ARRAY
 console.log(universities);
 
 
@@ -169,10 +172,15 @@ like this:
 Log the result of your new array. */
 const contactInfo = [];
 
+//MAPPING THROUGH THE OLD ARRAY WITH THE CB ON GRADUATES
+graduates.map(function(graduates) {
 
+  //PUSHING THE CONCATENATION OF FIRST NAME AND EMAIL
+  contactInfo.push(`${graduates.first_name} ${graduates.email}`);
 
+})
 
-
+//DISPLAY THE NEW ARRAY OF INFO
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
