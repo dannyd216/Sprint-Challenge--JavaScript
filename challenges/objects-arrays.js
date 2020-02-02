@@ -79,11 +79,10 @@ const graduates = [
 
 i was confused as to how to word the command when the array is given already
 
-
 Once you have the new array created, sort the universities alphabetically and log the result. */
 
 
-/**FIXED THIS */
+
 const universities = [];
 
 //FIRST CREATE THE CORRECT COMMAND 
@@ -91,8 +90,12 @@ const universities = [];
 
 
 //WE ARE PUSHING WHAT IS ON THE LEFT TO THE ARRAY REFERENCED ON THE RIGHT
-graduates.map(graduates => { return universities.push(graduates.university);  
+graduates.map(graduates => { 
+  
+  universities.push(graduates.university);  
+  
   universities.sort();
+
 // THEN SORT THE ARRAY
 });
 
@@ -220,20 +223,21 @@ and an initial value for the count.
 
 const populationTotal = 0;
 
-// let total = zooAnimals.reduce((accum, populationTotal) => {return accum + populationTotal.population}, );
+//let total = zooAnimals.reduce((accum, populationTotal) => {return accum + populationTotal} ,0 );
 // let total = zooAnimals.reduce((accum, populationTotal) => {return populationTotal += zooAnimals.population;}, 0);
 // total.push(zooAnimals.reduce(((sum, populationTotal) => { return sum + populationTotal}, )));
 
-zooAnimals.reduce(function (acc, populationTotal) {
+// zooAnimals.reduce(function (acc, populationTotal) {
 
-return populationTotal += acc;
+// return populationTotal += acc;
 
-}, 0);
+// }, 0);
 
 // CONST WONT BE REDEFINED
 
 console.log(populationTotal);
 
+//console.log(total);
 
 
 /*
