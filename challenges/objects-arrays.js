@@ -88,14 +88,12 @@ const universities = [];
 
 //FIRST CREATE THE CORRECT COMMAND 
 //.map MUST HAVE A CALLBACK SO WE MUST MAKE IT I.E. FUNCTION(GRADUATES){}
-graduates.map(function(graduates) {
 
-  //WE ARE PUSHING WHAT IS ON THE LEFT TO THE ARRAY REFERENCED ON THE RIGHT
-  universities.push(graduates.university);
 
-  //THEN SORT THE ARRAY
+//WE ARE PUSHING WHAT IS ON THE LEFT TO THE ARRAY REFERENCED ON THE RIGHT
+graduates.map(graduates => { return universities.push(graduates.university);  
   universities.sort();
-
+// THEN SORT THE ARRAY
 });
 
 //DISPLAY THE NEW ARRAY
@@ -117,12 +115,9 @@ Log the result of your new array. */
 const contactInfo = [];
 
 //MAPPING THROUGH THE OLD ARRAY WITH THE CB ON GRADUATES
-graduates.map(function(graduates) {
 
-  //PUSHING THE CONCATENATION OF FIRST NAME AND EMAIL
-  contactInfo.push(`${graduates.first_name} ${graduates.email}`);
-
-})
+graduates.map(graduates => contactInfo.push(`${graduates.first_name} ${graduates.email}`));
+ //PUSHING THE CONCATENATION OF FIRST NAME AND EMAIL
 
 //DISPLAY THE NEW ARRAY OF INFO
 console.log(contactInfo);
@@ -139,15 +134,10 @@ contains them all. This will be an array of objects.
 const unisWithUni = [];
 
 //SEARCHING THE ARRAY:UNIVERSITY 
-graduates.filter(function(graduates) {
 
-    return graduates.university === "Uni";
+graduates.filter(graduates => graduates.university === "Uni");
 
-
-  }
-);
-
-
+//FIX THIS
 console.log(unisWithUni);
 
 
@@ -181,10 +171,7 @@ only the animal_name and scientific_name of each animal.
 */
 const displayNames = [];
 
-zooAnimals.forEach(function(zooAnimal) {
-
-  displayNames.push(`Name: ${zooAnimal.animal_name}, Scientific: ${zooAnimal.scientific_name}.`);
-})
+zooAnimals.forEach(zooAnimal => displayNames.push(`Name: ${zooAnimal.animal_name}, Scientific: ${zooAnimal.scientific_name}.`));
 
 console.log(displayNames);
 
@@ -200,11 +187,7 @@ this pattern: "jackal, asiatic". Log the resut.
 
 const lowCaseAnimalNames = [];
 
-zooAnimals.map(function (zooAnimals) {
-
-  lowCaseAnimalNames.push(zooAnimals.animal_name.toLowerCase());
-})
-
+zooAnimals.map(zooAnimals  => lowCaseAnimalNames.push(zooAnimals.animal_name.toLowerCase()));
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -243,10 +226,11 @@ const populationTotal = 0;
 
 zooAnimals.reduce(function (acc, populationTotal) {
 
-
+return populationTotal += acc;
 
 }, 0);
 
+// CONST WONT BE REDEFINED
 
 console.log(populationTotal);
 
