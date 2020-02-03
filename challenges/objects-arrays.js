@@ -134,14 +134,26 @@ contains them all. This will be an array of objects.
 
  //NEED TO FIX THIS 
 
-const unisWithUni = [];
+let unisWithUni = [];
 
 //SEARCHING THE ARRAY:UNIVERSITY 
 
-graduates.filter(graduates => graduates.university === "Uni");
+graduates.filter(graduates => { 
+  
+    graduates.university.includes("Uni");
+
+ unisWithUni.push(graduates.university);
+});
+
 
 //FIX THIS
 console.log(unisWithUni);
+
+// for (i = 0; i < graduates.length; i++) {
+//   if (graduates[i].university.includes('Uni')){
+//   uni.push(graduates[i].university);}
+// }
+// console.log(uni);
 
 
 // ==== ADVANCED Array Methods ====
@@ -219,25 +231,19 @@ and an initial value for the count.
 
 */
 // CONST WONT BE REASSIGNED HOW TO GET IT TO CHANGE FROM 0
-//NEED TO FIX
+//YA'LL NEED TO FIX THIS
 
-const populationTotal = 0;
 
-//let total = zooAnimals.reduce((accum, populationTotal) => {return accum + populationTotal} ,0 );
-// let total = zooAnimals.reduce((accum, populationTotal) => {return populationTotal += zooAnimals.population;}, 0);
-// total.push(zooAnimals.reduce(((sum, populationTotal) => { return sum + populationTotal}, )));
+//const populationTotal = 0;
 
-// zooAnimals.reduce(function (acc, populationTotal) {
 
-// return populationTotal += acc;
+const populationTotal = zooAnimals.reduce(function (acc, curr) {
 
-// }, 0);
-
-// CONST WONT BE REDEFINED
+  return acc + curr.population;
+},0);
 
 console.log(populationTotal);
 
-//console.log(total);
 
 
 /*
